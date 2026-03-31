@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service Definition'
+define service ZJKP_SERV_SALES {
+  expose ZJKP_ICDS_SO;
+  expose ZJKP_ICDS_SI;
+  expose ZJKP_ICDS_PROD;
+  expose ZJKP_ICDS_CUST;
+}

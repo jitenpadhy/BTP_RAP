@@ -1,0 +1,7 @@
+@EndUserText.label: 'Service Definition: Sales order header projection view'
+define service ZJIT_SRVD_SALES_TRN_APP {
+  expose ZJIT_PRC_SO;
+  expose ZJIT_CDS_PRC_SOIT;
+  expose ZJKP_ICDS_CUST;
+  expose ZJKP_ICDS_PROD;
+}

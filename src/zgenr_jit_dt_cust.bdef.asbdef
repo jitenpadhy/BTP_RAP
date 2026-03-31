@@ -1,0 +1,50 @@
+managed implementation in class ZGENBP_R_JIT_DT_CUST unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZGENR_JIT_DT_CUST alias ZgenrJitDtCust
+persistent table ZJIT_DT_CUST
+extensible
+draft table ZGENJIT_DT_CST_D
+etag master LocalLastChanged
+lock master total etag LastChanged
+authorization master( global )
+{
+  field ( mandatory : create )
+   CustID;
+
+  field ( readonly )
+   LocalLastChanged,
+   LastChanged,
+   LocalChangedBy,
+   LastChangedBy;
+
+  field ( readonly : update )
+   CustID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZJIT_DT_CUST corresponding extensible
+  {
+    CustID = CUST_ID;
+    Name = NAME;
+    CompanyName = COMPANY_NAME;
+    Country = COUNTRY;
+    City = CITY;
+    Mobile = MOBILE;
+    LocalLastChanged = LOCAL_LAST_CHANGED;
+    LastChanged = LAST_CHANGED;
+    LocalChangedBy = LOCAL_CHANGED_BY;
+    LastChangedBy = LAST_CHANGED_BY;
+  }
+
+}

@@ -1,0 +1,13 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZJIT_CDS_PRC_SOIT with
+{
+  @UI.lineItem:  [{ position:10 , label: 'Sales Order' }]
+  Soid;
+  @UI.lineItem: [{ position:20 , label: 'Sales Item' }]
+  ItemId;
+  @UI.lineItem: [{ position:30 , label: 'Product' }]
+  Product;
+  @UI.lineItem:  [{ position:40 , label: 'Amount' }]
+  Amount;
+
+}

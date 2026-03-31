@@ -1,0 +1,86 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo: {
+    typeName: 'Sales Order',
+    typeNamePlural: 'Sales Order',
+    title: {
+        type: #STANDARD,
+        label: 'Sales O',
+        value: 'Soid'
+    },
+    description: {
+        type: #STANDARD,
+        label: 'Sales Details',
+        value: 'SalesPerson'
+    }
+}
+@Search.searchable: true
+annotate entity ZJKP_ICDS_SO with
+{
+@UI.facet: [{
+    id: 'SalesO',
+    purpose: #STANDARD,
+    position:10 ,
+    label: 'Sales Order Deatails',  
+    type: #IDENTIFICATION_REFERENCE
+},
+{ id: 'Customer',
+    purpose: #STANDARD,
+    position:20 ,
+    label: 'Customer Deatails',
+    type: #IDENTIFICATION_REFERENCE,
+    targetElement: '_Cust'
+    },
+    { id: 'Sales_Item',
+    purpose: #STANDARD,
+    position:30 ,
+    label: 'Sales Order Item',
+    type: #LINEITEM_REFERENCE,
+    targetElement: '_Item'
+    }
+]
+  @EndUserText.label: 'Order No'
+  @UI.lineItem: [{ position: 10 , label: 'Sales ord' }]
+  @UI.selectionField: [{ position: 10  }]
+  @UI.identification: [{ position:10 , label: 'Sales Order' }]
+  // @Search.defaultSearchElement: true
+  Soid;
+  @UI.lineItem: [{ position: 20 , label: 'Customer' }]
+  @UI.selectionField: [{ position: 20  }]
+   @EndUserText.label: 'Customer Number'
+  @Search.defaultSearchElement: true
+  @UI.identification: [{ position: 20 , label: 'Customer' }]
+  Buyer;
+  @UI.lineItem: [{ position: 30 , label: 'Sales Person' }]
+   @UI.identification: [{ position: 30 , label: 'Sales Person' }]
+  SalesPerson;
+  @UI.lineItem: [{ position: 40 , label: 'Time' }]
+   @UI.identification: [{ position: 40 , label: 'Time' }]
+  SalesTimestamp;
+  @UI.lineItem: [{ position: 50 , label: 'Sales Manager' }]
+   @UI.identification: [{ position: 50 , label: 'Sales Manager' }]
+  SalesManager;
+  @UI.lineItem: [{ position: 60 , label: 'App Time' }]
+   @UI.identification: [{ position: 60 , label: 'App Time' }]
+  ApprovalTimestamp;
+  @UI.lineItem: [{ position: 70 , label: 'Changed On' }]
+  ChangedOn;
+  @UI.lineItem: [{ position: 80 , label: 'Changed Person' }]
+    @UI.selectionField: [{ position: 40  }]
+   @EndUserText.label: 'Changed Person'
+   @Search.defaultSearchElement: true
+   @UI.identification: [{ position: 80 , label: 'Changed Person' }]
+  ChangedBy;
+  @UI.lineItem: [{ position: 90 , label: 'Created On' }]
+    @UI.selectionField: [{ position: 50  }]
+   @EndUserText.label: 'Created On'
+   @Search.defaultSearchElement: true
+   @UI.identification: [{ position: 90 , label: 'Created On' }]
+  CreatedOn;
+  @UI.lineItem: [{ position: 100 , label: 'Created Person' }]
+  @Search.defaultSearchElement: true
+  @UI.selectionField: [{ position: 20  }]
+  @EndUserText.label: 'Created By'
+  CreatedBy;
+  @UI.lineItem: [{ position: 110 , label: 'Url' }]
+  Url;
+}

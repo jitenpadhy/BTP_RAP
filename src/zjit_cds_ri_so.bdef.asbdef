@@ -1,0 +1,27 @@
+managed implementation in class zbp_jit_cds_ri_so unique;
+strict ( 2 );
+
+define behavior for ZJIT_CDS_RI_SO //alias <alias_name>
+persistent table zjit_dt_so
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Soid;
+  association _Item { create; }
+}
+
+define behavior for ZJIT_CDS_RC_SOIT //alias <alias_name>
+persistent table zjit_dt_soit
+lock dependent by _header
+authorization dependent by _header
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) Soid, ItemId;
+  association _header;
+}

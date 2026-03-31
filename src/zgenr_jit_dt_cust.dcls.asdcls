@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZGENR_JIT_DT_CUST'
+@MappingRole: true
+define role ZGENR_JIT_DT_CUST {
+  grant select on ZGENR_JIT_DT_CUST
+  where TRUE;
+}

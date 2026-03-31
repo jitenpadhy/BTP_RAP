@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZGENJIT_DT_CUST",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZGENJIT_DT_CUST",
+  "sapObjectType": "ZGENJIT_DT_CUST",
+  "rootNode": true
+}
