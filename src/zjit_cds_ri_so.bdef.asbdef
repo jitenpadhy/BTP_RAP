@@ -10,8 +10,23 @@ authorization master ( instance )
   create ( authorization : global );
   update;
   delete;
-  field ( readonly ) Soid;
+  field ( readonly :update ) Soid;//Non editable when update mode
+  field(mandatory)Buyer;
   association _Item { create; }
+  mapping for zjit_dt_so {
+    Soid = soid ;
+	Buyer = buyer;
+	SalesPerson = sales_person;
+	SalesTimestamp = sales_timestamp;
+	SalesManager = sales_manager ;
+	ApprovalTimestamp = approval_timestamp;
+	CreatedBy = created_by;
+	CreatedOn = created_on;
+	ChangedBy = changed_by;
+	ChangedOn = changed_on;
+	Url       = url;
+	}
+
 }
 
 define behavior for ZJIT_CDS_RC_SOIT //alias <alias_name>
@@ -22,6 +37,11 @@ authorization dependent by _header
 {
   update;
   delete;
-  field ( readonly ) Soid, ItemId;
+  field ( readonly :update) Soid, ItemId;
   association _header;
+  mapping for zjit_dt_soit{
+  Soid = soid ;
+  ItemId = item_id;
+  SalesPerson = sales_person;
+  }
 }

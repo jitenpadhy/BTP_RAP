@@ -20,5 +20,6 @@ define  view entity ZJIT_CDS_PRC_SOIT
       ImageItem,
       /* Associations */
       _header : redirected to parent ZJIT_PRC_SO ,
-      _Prod
-}
+      _Prod,
+      _DLSH 
+      }

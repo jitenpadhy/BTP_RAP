@@ -11,6 +11,9 @@ define  view entity ZJIT_CDS_RC_SOIT
   association to ZJKP_ICDS_PROD as _Prod
 on  $projection.Product = _Prod.ProdId
 
+association to ZJIT_ICDS_DLSH as _DLSH
+on $projection.Soid = _DLSH.Soid
+and $projection.ItemId = _DLSH.ItemId
 {
   key soid               as Soid,
   key item_id            as ItemId,
@@ -25,6 +28,7 @@ on  $projection.Product = _Prod.ProdId
       changed_by         as ChangedBy,
       changed_on         as ChangedOn,
       image_item         as ImageItem,
-      _header,
-      _Prod    
+      _header ,
+      _Prod ,
+      _DLSH   
 }

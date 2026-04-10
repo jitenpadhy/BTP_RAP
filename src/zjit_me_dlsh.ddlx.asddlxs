@@ -1,0 +1,31 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZJIT_PROJ_DLSH with
+{
+  @UI.facet: [{
+      id: 'Delivey_SCH',
+      purpose: #STANDARD,
+      parentId: 'ZJIT_CDS_PRC_SOIT',
+      position: 10,
+      label: 'Delivey Schedule',
+      type:#IDENTIFICATION_REFERENCE
+
+  }]
+  @UI.lineItem:  [{ position: 10, label: 'Sales Order' }]
+  @UI.identification: [{ position: 10, label: 'Sales Order' }]
+  Soid;
+  @UI.identification: [{ position: 20, label: 'Item No' }]
+  ItemId;
+  @UI.identification: [{ position: 30, label: 'Delivery Number' }]
+  Delno;
+  @UI.identification: [{ position: 40, label: 'Material' }]
+  Product;
+  @UI.identification: [{ position: 50, label: 'Quantity' }]
+  Quantity;
+  @UI.identification: [{ position: 60, label: 'Delivery Date' }]
+  Deldate;
+  @UI.identification: [{ position: 70, label: 'Measure' }]
+  Unitmeasure;
+ 
+  /* Associations */
+  
+}

@@ -15,16 +15,29 @@
 //}
 annotate entity ZJKP_ICDS_SI with
 {
+  @UI.facet: [{
+      id: 'Sales_Item',
+      purpose: #STANDARD,
+      position:10 ,
+      label: 'Sales Item',
+      type: #IDENTIFICATION_REFERENCE
+  }]
   @UI.lineItem:  [{ position:10 , label: 'Sales Order' }]
+  @UI.identification: [{ position:10 , label: 'Sales Order' }]
   Soid;
   @UI.lineItem: [{ position:20 , label: 'Sales Item' }]
+  @UI.identification: [{ position:20 , label: 'Sales Item' }]
   ItemId;
-  @UI.lineItem: [{ position:10 , label: 'Product' }]
+  @UI.lineItem: [{ position:30 , label: 'Product' }]
+  @UI.identification: [{ position:30 , label: 'Product' }]
   Product;
-  @UI.lineItem:  [{ position:10 , label: 'Amount' }]
+  @UI.lineItem:  [{ position:40 , label: 'Amount' }]
+  @UI.identification:  [{ position:40 , label: 'Amount' }]
   Amount;
-  //   Currency;
-  //   SalesPerson;
+  @UI.identification:  [{ position:50 , label: 'Currency' }]
+  Currency;
+  @UI.identification:  [{ position:60 , label: 'Sales Person' }]
+  SalesPerson;
   //   SalesTimestamp;
   //   SalesManager;
   //   ApprovalTimestamp;

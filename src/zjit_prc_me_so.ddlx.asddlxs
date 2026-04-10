@@ -23,7 +23,7 @@ annotate entity ZJIT_PRC_SO with
       label: 'Sales Order Deatails',
       type: #IDENTIFICATION_REFERENCE
   },
-  { id: 'Customer',
+  {   id: 'Customer',
       purpose: #STANDARD,
       position:20 ,
       label: 'Customer Deatails',

@@ -1,13 +1,38 @@
 @Metadata.layer: #CUSTOMER
 annotate entity ZJIT_CDS_PRC_SOIT with
 {
+  @UI.facet: [{
+      id: 'Sales_Item',
+      purpose: #STANDARD,
+      position:10 ,
+      label: 'Sales Item',
+      type: #IDENTIFICATION_REFERENCE
+  },
+  {  
+      id: 'Delivey_SCH',
+      purpose: #STANDARD,
+      position:20 ,
+      label: 'Delivry Schedule',
+      type: #IDENTIFICATION_REFERENCE,
+      targetElement:'_DLSH'
+      }
+  ]
   @UI.lineItem:  [{ position:10 , label: 'Sales Order' }]
+  @UI.identification: [{ position:10 , label: 'Sales Order' }]
   Soid;
   @UI.lineItem: [{ position:20 , label: 'Sales Item' }]
+  @UI.identification: [{ position:20 , label: 'Sales Item' }]
   ItemId;
   @UI.lineItem: [{ position:30 , label: 'Product' }]
+  @UI.identification: [{ position:30 , label: 'Product' }]
   Product;
   @UI.lineItem:  [{ position:40 , label: 'Amount' }]
+  @UI.identification:  [{ position:40 , label: 'Amount' }]
   Amount;
+  @UI.identification:  [{ position:50 , label: 'Currency' }]
+  Currency;
+  @UI.identification:  [{ position:60 , label: 'Sales Person' }]
+  @UI.lineItem:  [{ position:60 , label: 'Sales Person' }]
+  SalesPerson;
 
 }
