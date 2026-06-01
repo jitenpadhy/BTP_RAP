@@ -1,5 +1,13 @@
-CLASS zbp_jit_cds_ri_so DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zjit_cds_ri_so.
+class ZBP_JIT_CDS_RI_SO definition
+  public
+  create private .
+
+public section.
+protected section.
+private section.
 ENDCLASS.
 
-CLASS zbp_jit_cds_ri_so IMPLEMENTATION.
+
+
+CLASS ZBP_JIT_CDS_RI_SO IMPLEMENTATION.
 ENDCLASS.

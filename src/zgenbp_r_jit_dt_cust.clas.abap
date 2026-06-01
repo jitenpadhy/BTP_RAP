@@ -1,8 +1,6 @@
 class ZGENBP_R_JIT_DT_CUST definition
   public
-  abstract
-  final
-  for behavior of ZGENR_JIT_DT_CUST .
+  create private .
 
 public section.
 protected section.
